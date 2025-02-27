@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var email = ""
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            FormField(icon: "envelope.fill", placeHolder: "Email", value: $email)
         }
         .padding()
     }
